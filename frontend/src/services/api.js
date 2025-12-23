@@ -43,3 +43,13 @@ export const contratosAPI = {
 export default api;
 
 
+// Agregar al final del archivo, antes de export default api;
+
+// Empleados API
+export const empleadosAPI = {
+  getAll: () => api.get('/empleados'),
+  getById: (id) => api.get(`/empleados/${id}`),
+  create: (data) => api.post('/empleados', data),
+  update: (id, data) => api.put(`/empleados/${id}`, data),
+  delete: (id) => api.delete(`/empleados/${id}`),
+};
